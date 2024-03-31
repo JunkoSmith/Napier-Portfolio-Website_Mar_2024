@@ -50,7 +50,7 @@
   position: absolute;
   width: 100%;
   height: 100svh;
-  padding: 1.25rem;
+  /* padding: 1.25rem; */
   background-color: bisque;
   display: flex;
   align-items: center;
@@ -74,6 +74,7 @@ img.logo_japan {
 
 .title_wrap {
   color: #FAFAFA;
+  width: 100%;
   max-width: 1440px;
 }
 
@@ -92,6 +93,38 @@ img.logo_japan {
   color: #FAFAFA;
   font-weight: 700;
 }
+
+/* Loop Text Animation - Start ========================================*/
+
+.loop-text {
+  position: absolute;
+  display: flex;
+  top: 72%;
+  left: calc(50% - 50vw);
+  z-index: -1;
+  transform: translateY(-50%);
+  white-space: nowrap;
+
+}
+
+.loop-text_inner {
+  padding-right: 20px;
+  font-family: 'Marcellus', serif;
+  font-size: 7.0rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: transparent;
+  -webkit-text-stroke: 1px #181818;
+  white-space: nowrap;
+  animation: slideText 50s linear infinite;
+}
+
+@keyframes slideText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+/* Loop Text Animation - End ========================================*/
+
 .project_info {
   position: absolute;
   top: 85%;
@@ -121,7 +154,6 @@ img.logo_japan {
 }
 
 .project_info_space {
-  /* padding: 1.5rem 1.5rem 3rem 1.5rem; */
   margin: 0 1.25rem;
   background-color: #FAFAFA;
   color: #FAFAFA;
@@ -133,7 +165,6 @@ img.logo_japan {
 }
 
 .project_content p {
-  /* font-size: 0.875rem; */
   font-size: clamp(16px, 2.3vw, 22px);
   padding: 0.5rem 0 0.5rem 0 !important;
 

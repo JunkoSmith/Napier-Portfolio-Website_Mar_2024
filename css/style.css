@@ -116,7 +116,7 @@ img {
   vertical-align: bottom;
 }
 
-/* Opening Animation Start *****==================================*/
+/* Opening Animation Start (HOME)*****==================================*/
 .project_category h3 {
   padding-top: 8rem;
   margin-top:-8rem;
@@ -285,6 +285,112 @@ img {
   }
 }
 /* Opening Animation End   *****==================================*/
+
+.shutter_pages {
+  background-color: #FAFAFA;
+  position:fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index:9999;
+  animation: helloShutter 1.5s 1.5s ease-out forwards;
+}
+
+@keyframes helloShutter {
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -5;
+  }
+}
+
+.shutter_pages::before,
+.shutter_pages::after {
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  margin:auto;
+}
+
+.shutter_pages::before {
+  background-color:#ffafcc;
+  width:0;
+  height:1px;
+  animation: openLine 1.2s 1s forwards;
+}
+
+@keyframes openLine {
+  0% {
+    width: 0;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  90% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.shutter_pages::after {
+  background-color:#ffc8dd;
+  width:120%;
+  height:0;
+  margin-left:-10%;
+  animation: shutterOpen1 1s 1.3s forwards;
+}
+
+@keyframes shutterOpen1 {
+  60%{
+    width:120%;
+    height:0;
+    transform:rotate(5deg);
+  }
+  90%{
+    width:120%;
+    height:100%;
+    transform:rotate(-5deg);
+  }
+  100%{
+    width:120%;
+    height:100%;
+    transform:rotate(-5deg);
+  }
+}
+
+.shutter-title1_pages h1 {
+  margin-bottom: 8rem;
+  font-size: 4rem;
+  color: #181818;
+  opacity: 0;
+  animation: title1_in_pages 2s .5s forwards;
+}
+
+@keyframes title1_in_pages {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 
 /* Opening Animation (if add content appier) Start *****===========*/
 
@@ -1101,36 +1207,39 @@ footer {
 .text-animation_about {
   max-width: 1440px;
   margin: 0 auto;
-  animation: titleAnime 5s 0.3s forwards;
+  opacity: 0;
+  animation: titleAnime 2s 1s forwards;
 }
 @keyframes titleAnime {
-
-  0%{
-  opacity: 0;
- }
- 100%{
-  opacity: 1;
- }
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .firstWord {
-  max-width: 800px;
+  max-width: 1280px;
   margin: 4rem auto;
 }
 
 .firstWord p {
   margin: 2rem 1rem;
-  animation: titleAnime2 3s 0.6s forwards;
+  font-size: 0.875rem;
   transform: translateY(50px);
   opacity: 0;
+  animation: titleAnime2 3s 2s forwards;
 }
 
 @keyframes titleAnime2 {
   0% {
   }
   100% {
-      transform: translateY(0);
-      opacity: 1;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -1182,48 +1291,59 @@ footer {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 
 .about-left {
   display: flex;
   align-items: center;
-  background-color: #eeeeee;
+  background-color: #181818;
   box-shadow: 13px 12px 26px -22px #000;
-  border-bottom: 2px solid #181818;
+  border-bottom: 2px solid #5f5f5f;
   margin: 0 1rem;
 }
 
 .about-left h4 {
-  font-size: 2.08rem;
+  font-size: clamp(22px, 2.3vw, 24px);
   margin: 0 1rem;
   padding: 1rem 0;
-  color: #000;
+  color: #FAFAFA;
+}
+
+.about-right h5 {
+  font-size: clamp(18px, 2.3vw, 20px);
 }
 
 .about-right {
   display: block;
-  background-color: #eeeeee;
+  color: #FAFAFA;
+  background-color: #181818;
   box-shadow: 13px 12px 26px -22px #000;
   margin: 0 1rem;
-  padding: 1.25rem;
+  padding: 0 1.25rem;
 
 }
 
 .about-right p {
-  padding: 1rem 1rem 0 1rem;
+  padding: 0rem 1rem 1rem 1rem;
+  font-size: clamp(16px, 2.3vw, 18px);
 }
 
-.list-left li,
-.list-right li{
+.skill-list li{
   margin-left: 2rem;
-  margin-right: 2rem;
+  padding: 0.3rem 0;
   list-style: none;
   font-size: 1.125rem;
   letter-spacing: 0.1em;
   line-height: 1.8;
   font-weight: 500;
   text-shadow: 1px 1px 3px #818181;
+}
+.skill-box {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  
 }
 /** PAGE / ABOUT ME -- end ----**/
 
@@ -1503,7 +1623,7 @@ textarea[name="message"]:focus {
     width: 124px;
     height: 124px;
   }
-  /* ==== About SEction End === */
+  /* ==== About Section End === */
 
   .skills_container {
     max-width: 1440px;
@@ -1536,6 +1656,15 @@ textarea[name="message"]:focus {
   .firstWord {
     padding-bottom: 2rem;
   }
+
+  /* ==== Page About Skills section Start === */
+  .skill-box {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+  /* ==== Page Sbout Skills section End === */
+  
 
   
   
