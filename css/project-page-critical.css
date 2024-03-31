@@ -1,0 +1,424 @@
+@charset "UTF-8";
+
+:root {
+  --w_h: 0px;
+}
+
+.site-inner-wrapper {
+  margin-top: -2.4rem;
+  max-width: 100%;
+}
+
+.project_ImageWrap {
+  position: relative;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.project_image-mobile img {
+  padding-top: 2.4rem;
+  height: 100svh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top
+}
+
+.project_image-mobile_visual img {
+  padding-top: 5.4rem;
+  height: 100svh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.project_image_visual,
+.project_image {
+  display: none;
+}
+
+.imageOverlay {
+  background-color: rgba(31, 31, 31, .5);
+}
+
+.project_PageTop_wrap {
+  position: absolute;
+  width: 100%;
+  height: 100svh;
+  padding: 1.25rem;
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: rgba(31, 31, 31, .5);
+  z-index: 2;
+}
+
+.title_wrap img {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 2rem;
+}
+
+img.logo_japan {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 2rem;
+}
+
+.title_wrap {
+  color: #FAFAFA;
+  max-width: 1440px;
+}
+
+.main_title {
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  color: #FAFAFA;
+}
+
+.title_outer_wrap {
+  max-width: 1440px;
+  width: 100%;
+}
+
+.bg_title_animation {
+  color: #FAFAFA;
+  font-weight: 700;
+}
+.project_info {
+  position: absolute;
+  top: 85%;
+  margin: 0 1.25rem;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.page-box {
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  z-index: 3;
+  background-color: #e7e514;
+}
+
+.page-box_visual {
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  z-index: 3;
+  background-color: #f17daa;
+}
+
+.page-box_web {
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  z-index: 3;
+  background-color: #032133;
+  color: #FAFAFA;
+}
+
+.project_info_space {
+  /* padding: 1.5rem 1.5rem 3rem 1.5rem; */
+  margin: 0 1.25rem;
+  background-color: #FAFAFA;
+  color: #FAFAFA;
+}
+.page-box_space {
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  z-index: 3;
+  background-color: #FAFAFA;
+}
+
+.project_content p {
+  /* font-size: 0.875rem; */
+  font-size: clamp(16px, 2.3vw, 22px);
+  padding: 0.5rem 0 0.5rem 0 !important;
+
+}
+.middle_info-card,
+.top_info {
+  margin-bottom: 1.5rem;
+}
+
+.info-card_content p {
+  /* font-size: 0.875rem; */
+  font-size: clamp(16px, 2.3vw, 22px);
+  padding-bottom: 0.6rem;
+}
+
+.info-card_button {
+  text-decoration: none;
+  color: #FAFAFA;
+  font-size: 0.813rem;
+  background-color: #181818;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+}
+
+.info-card_button:hover {
+  background-color: #ffafcc;
+  color: #181818;
+}
+
+.below_process {
+  padding: 1.25rem;
+}
+
+.image_banner-box {
+ margin-bottom: 3rem;
+}
+
+.project_content_visual {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding-bottom: 2rem;
+}
+
+.design_slideshow {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.slideshow_slider-inner {
+  margin: 1rem 0 0 0;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.slideshow_slider_button {
+  text-decoration: none;
+  color: #FAFAFA;
+  font-size: 0.813rem;
+  background-color: #181818;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project_images_top {
+  text-align: center;
+  
+}
+.project_images_low-card h4,
+.project_images_top-web h4,
+.project_images_top h4 {
+  max-width: 1440px;
+  text-align: start;
+  margin: 0 auto;
+}
+
+.project_show {
+  margin: 2rem;
+}
+.low-card_inner,
+.project_images_top-card {
+  margin: 0 auto;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center
+}
+
+
+
+.project_images_low-card {
+  padding-top: 2rem;
+}
+
+/* Slideshow　Slider Start */
+/*==================================================
+
+/*メイン画像下に余白をつける*/
+
+.gallery{
+  margin:2rem 0 5px 0;
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+  z-index: 3;
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #ccc;/*矢印の色*/
+    border-right: 2px solid #ccc;/*矢印の色*/
+    height: 25px;
+    width: 25px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left:2.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right:2.5%;
+    transform: rotate(45deg);
+}
+
+/*選択するサムネイル画像の設定*/
+.choice-btn li{
+  cursor: pointer;
+  outline: none;
+  background:#333;
+  width:25%!important;
+}
+
+.choice-btn li img{
+  opacity: 0.4;/*選択されていないものは透過40%*/
+}
+
+.choice-btn li.slick-current img{
+  opacity: 1;/*選択されているものは透過しない*/
+}
+
+/*画面幅サイズ変更に伴うサムネイル固定 *8枚以上のスライドなので外します。*/
+/* .choice-btn .slick-track {
+  transform: unset !important;
+} */
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+エリア全体を中央寄せ
+.slideshow_slider_wrapper {
+  width:94%;
+  /* max-width:900px; */
+  max-width: 1440px;
+  margin:0 auto;
+  padding-top: 2rem;
+}
+
+.slideshow_slider h3 {
+  font-size: 2rem;
+  margin:3rem 0 1.25rem 0;
+}
+
+
+ul{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  color: #181818;
+}
+
+a:hover,
+a:active{
+  text-decoration: none;
+}
+
+.wrapper_add-margin {
+  font-size: 0.6rem;
+  margin:1.25rem 0 3rem 0;
+}
+
+
+
+.image_banner-box img {
+  width: 100%;
+  margin-top: 2rem;
+  margin-top: 2rem;
+}
+
+
+/* slideshow　Slider */
+
+.project_images_top {
+  margin-top: 2rem;
+}
+
+
+/* == iPad == 768px == -- start --------------- ============================================== */
+@media only screen and (min-width: 375px) and (min-width: 768px){
+  .project_image-mobile {
+    display: none;
+  }
+
+  .project_image {
+    display: block;
+  }
+
+  .project_image img {
+    padding-top: 2.4rem;
+    object-fit: cover;
+    object-position: center top
+  }
+
+  .page-box_web,
+  .page-box_visual, 
+  .page-box {
+    padding: 4rem 4rem 2rem 4rem;
+  }
+
+  .middle_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 3rem 0;
+  }
+  .middle_info-card {
+    width: 30%;
+  }
+
+  .bottom_info {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0 4rem 0;
+    justify-content: space-between;
+  }
+
+  .bottom_info-card {
+    width: 45%;
+  }
+}
+
+.slideshow_slider-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* == Desktop == 1440px == -- start ---------- == */
+@media only screen and (min-width: 1280px) {
+  .project_info_space {
+    margin-bottom: 5rem;
+  }
+  
+  .page-box_web,
+  .page-box_visual,
+  .page-box {
+    padding: 4rem 4rem 2rem 4rem;
+    max-width: 70%;
+  }
+
+  .page-box_top {
+    width: 15%;
+  }
+
+  .project_images_top {
+    width: 100%;
+  }
+
+  .project_images_low {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .project_images_low-card {
+    width: 100%;
+    margin: 1.25rem;
+    max-width: 750px;
+  }
+
+}
+
+
+
