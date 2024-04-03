@@ -1002,7 +1002,7 @@ main {
   flex-direction: column;
 }
 
-/* ==== About image fede in Start=========================== */
+/* ==== About image fade in Start=========================== */
  .card_images {
   position: relative;
   order: -1;
@@ -1085,7 +1085,7 @@ main {
     scale:1;
   }
 }
-/* ==== About image fede in End================================== */
+/* ==== About image fade in End================================== */
 
 .about_jpn {
   font-size: 0.875rem;
@@ -1204,6 +1204,83 @@ footer {
 /** PAGE / PROJECT -- end ----**/
 
 /** PAGE / ABOUT -- start --**/
+
+/* Fluid Animation */
+.fluid {
+  position: relative;
+  margin: 2rem auto 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+}
+
+/* .firstWord {
+  margin: 0 auto;
+  padding: 0;
+} */
+
+.shape_fluid {
+  position: absolute;
+  background: rgb(213, 189, 175);
+  width: 100%;
+  height: 80%;
+  margin: 1rem auto;
+  animation: fluidAnimation 40s ease 0s infinite normal;
+}
+
+@keyframes fluidAnimation {
+  0%, 100% {
+    border-radius: 65% 35% 51% 49% / 73% 45% 55% 27%;
+  }
+  7% {
+    border-radius: 65% 35% 83% 17% / 73% 63% 37% 27%;
+    background: rgb(213, 189, 175);
+  }
+  16% {
+    border-radius: 54% 46% 71% 29% / 35% 63% 37% 65%;
+    background: rgb(212, 162, 153);
+  }
+  25% {
+    border-radius: 24% 76% 68% 32% / 37% 57% 43% 63%;
+    background: rgb(212, 153, 178);
+  }
+  33% {
+    border-radius: 73% 27% 68% 32% / 37% 57% 43% 63%;
+    background: rgb(200, 153, 212)
+  }
+  47% {
+    border-radius: 61% 39% 52% 48% / 64% 63% 37% 36%;
+    background: rgb(154, 153, 212);
+  }
+  50% {
+    border-radius: 61% 39% 52% 48% / 64% 63% 37% 36%;
+    background: rgb(153, 196, 212);
+  }
+  61% {
+    border-radius: 37% 63% 9% 91% / 65% 20% 80% 35%;
+    background: rgb(182, 226, 211);
+  }
+  72% {
+    border-radius: 73% 27% 15% 85% / 75% 52% 48% 25%;
+    background: rgb(173, 224, 176);
+  }
+  76% {
+    border-radius: 62% 38% 47% 53% / 50% 46% 54% 50%;
+    background: rgb(186, 219, 152);
+  }
+  84% {
+    border-radius: 62% 38% 71% 29% / 34% 46% 54% 66%;
+    background: rgb(217, 219, 152);
+  }
+  95% {
+    border-radius: 62% 38% 71% 29% / 66% 46% 54% 34%;
+    background: rgb(219, 197, 152);
+  }
+}
+/* Fluid Animation End */
+
 .text-animation_about {
   max-width: 1440px;
   margin: 0 auto;
@@ -1223,7 +1300,6 @@ footer {
 
 .firstWord {
   max-width: 1280px;
-  margin: 4rem auto;
 }
 
 .firstWord p {
@@ -1281,9 +1357,8 @@ footer {
 .portfolio-card h4 {
   color: #FAFAFA;
 }
-/** PAGE / PORTFOLIO -- end ----**/
 
-/** PAGE / ABOUT ME -- start --**/
+/** PAGE / ABOUT / Experience part -- start --**/
 .about-card {
   display: flex;
   flex-direction: column;
@@ -1345,7 +1420,7 @@ footer {
   padding: 1.25rem;
   
 }
-/** PAGE / ABOUT ME -- end ----**/
+/** PAGE / ABOUT / Experience part -- end ----**/
 
 /** PAGE / CONTACT ME -- start --**/
 .portfolio_contact {
@@ -1588,7 +1663,7 @@ textarea[name="message"]:focus {
   }
   /* ==== Hover Zoom Images === */
 
-  /* ==== About SEction Start === */
+  /* ==== About Section Start === */
   .about_me-card {
     display: flex;
     justify-content: space-between;
@@ -1657,20 +1732,26 @@ textarea[name="message"]:focus {
     padding-bottom: 2rem;
   }
 
+  /* Page About / Fluid Animation Start */
+  .fluid {
+    margin: 2rem auto 5rem;
+  }
+
+  .shape_fluid {
+    width: 50vh;
+    height: 100%;
+  }
+  /* Page About / Fluid Animation End */
+
   /* ==== Page About Skills section Start === */
   .skill-box {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
   }
-  /* ==== Page Sbout Skills section End === */
-  
-
-  
-  
+  /* ==== Page About Skills section End === */
 }
 /* == iPad == 768px == -- end ----------------- == */
-
 
 /* == Desktop == 1440px == -- start ---------- == */
 @media only screen and (min-width: 1280px) {
@@ -1767,7 +1848,7 @@ textarea[name="message"]:focus {
     transform: scale(1.3);
   }
 
-  /* ==== About SEction Start === */
+  /* ==== About Section Start === */
 
   .card_images::before {
     right: 0;
@@ -1776,22 +1857,84 @@ textarea[name="message"]:focus {
     height: 150px
   }
   
-  /* .project-card {
-    width: 30%;
+  /* ==== About Section End === */
+
+  /* .fluid {
+    position: relative;
+    margin: 2rem auto 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1280px;
+  }
+
+  .firstWord {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .shape_fluid {
+    position: absolute;
+    background: rgb(213, 189, 175);
+    width: 50vh;
+    height: 100%;
     margin: 1rem auto;
+    animation: fluidAnimation 40s ease 0s infinite normal;
+  }
+
+  @keyframes fluidAnimation {
+    0%, 100% {
+      border-radius: 65% 35% 51% 49% / 73% 45% 55% 27%;
+    }
+    7% {
+      border-radius: 65% 35% 83% 17% / 73% 63% 37% 27%;
+      background: rgb(213, 189, 175);
+    }
+    16% {
+      border-radius: 54% 46% 71% 29% / 35% 63% 37% 65%;
+      background: rgb(212, 162, 153);
+    }
+    25% {
+      border-radius: 24% 76% 68% 32% / 37% 57% 43% 63%;
+      background: rgb(212, 153, 178);
+    }
+    33% {
+      border-radius: 73% 27% 68% 32% / 37% 57% 43% 63%;
+      background: rgb(200, 153, 212)
+    }
+    47% {
+      border-radius: 61% 39% 52% 48% / 64% 63% 37% 36%;
+      background: rgb(154, 153, 212);
+    }
+    50% {
+      border-radius: 61% 39% 52% 48% / 64% 63% 37% 36%;
+      background: rgb(153, 196, 212);
+    }
+    61% {
+      border-radius: 37% 63% 9% 91% / 65% 20% 80% 35%;
+      background: rgb(182, 226, 211);
+    }
+    72% {
+      border-radius: 73% 27% 15% 85% / 75% 52% 48% 25%;
+      background: rgb(173, 224, 176);
+    }
+    76% {
+      border-radius: 62% 38% 47% 53% / 50% 46% 54% 50%;
+      background: rgb(186, 219, 152);
+    }
+    84% {
+      border-radius: 62% 38% 71% 29% / 34% 46% 54% 66%;
+      background: rgb(217, 219, 152);
+    }
+    95% {
+      border-radius: 62% 38% 71% 29% / 66% 46% 54% 34%;
+      background: rgb(219, 197, 152);
+    }
   } */
-  /* ==== About SEction End === */
 
-
-
-  .list-left {
-    margin-left: 1rem;
-  }
-
-  .list-left li {
-    list-style: none;
-  }
-
+  /* Test End */
 
 }
+
 /* == Desktop == 1365px == -- end ------------ == */
